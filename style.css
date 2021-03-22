@@ -1,4 +1,6 @@
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0;
@@ -20,7 +22,7 @@ a {
 }
 
 #header {
-  background: #1E262D;
+  background: #1e262d;
   width: 100%;
   position: relative;
   display: -webkit-box;
@@ -52,13 +54,13 @@ nav li {
   float: left;
 }
 
-nav li a {
+nav li div {
   float: left;
   padding: 20px;
 }
 
-nav li a:hover {
-  background: #2C3E50;
+nav li div:hover {
+  background: #2c3e50;
 }
 
 nav li ul {
@@ -84,7 +86,7 @@ nav .mega-dropdown {
   border-bottom: 3px solid #34495e;
 }
 
-nav li li a {
+nav li li div {
   float: none;
   color: #333;
   display: block;
@@ -93,12 +95,12 @@ nav li li a {
   font-size: 13px;
 }
 
-nav li li a:hover {
+nav li li div:hover {
   background: #bdc3c7;
-  background: #FAFBFB;
+  background: #fafbfb;
 }
 
-nav li li li a {
+nav li li li div {
   float: none;
   color: #333;
   display: block;
@@ -107,9 +109,9 @@ nav li li li a {
   font-size: 13px;
 }
 
-nav li li li a:hover {
+nav li li li div:hover {
   background: #bdc3c7;
-  background: #FAFBFB;
+  background: #fafbfb;
 }
 
 .mega-col {
@@ -131,9 +133,9 @@ nav li li li a:hover {
   width: 30px;
   margin-bottom: 5px;
   display: block;
-  -webkit-transition: all .2s;
-  -webkit-transition: all .1s;
-  transition: all .1s;
+  -webkit-transition: all 0.2s;
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
 }
 
 .text {
@@ -149,6 +151,10 @@ nav li li li a:hover {
   width: 80%;
 }
 
+.arrow-down, .arrow-down-second {
+  display: none;
+}
+
 @media only screen and (max-width: 1170px) {
   nav > ul > li > a {
     padding: 35px 15px;
@@ -162,6 +168,19 @@ nav li li li a:hover {
 }
 
 @media only screen and (max-width: 1023px) {
+  .arrow-down, .arrow-down-second {
+    display: block;
+    float: right;
+    color: lightblue !important;
+    margin: 0;
+    padding: 0 !important;
+  }
+  .arrow-down, .arrow-down-second:hover {
+    cursor: pointer;
+  }
+  .expand {
+    display: block !important;
+  }
   .logo {
     float: left;
     padding: 46px 0 46px;
@@ -204,12 +223,12 @@ nav li li li a:hover {
   nav li {
     float: none;
   }
-  nav ul li a {
+  nav ul li div {
     float: none;
     padding: 8px;
     display: block;
   }
-  nav li li li a {
+  nav li li li div {
     float: none;
     color: #333;
     display: none;
@@ -217,9 +236,9 @@ nav li li li a:hover {
     border-radius: 3px;
     font-size: 13px;
   }
-  nav li li li a:hover {
+  nav li li li div:hover {
     background: #bdc3c7;
-    background: #FAFBFB;
+    background: #fafbfb;
   }
   #header nav ul ul {
     display: block;
@@ -228,16 +247,16 @@ nav li li li a:hover {
     border: none;
     padding: 0;
   }
-  #header nav a {
+  #header nav div {
     color: #fff;
     padding: 8px;
   }
-  #header nav a:hover {
+  #header nav div:hover {
     background: #fff;
     color: #333;
     border-radius: 3px;
   }
-  #header nav ul li li a:before {
+  #header nav ul li li div:before {
     content: "- ";
   }
   .mega-col {
