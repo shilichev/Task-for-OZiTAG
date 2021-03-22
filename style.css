@@ -54,7 +54,7 @@ nav li {
 
 nav li a {
   float: left;
-  padding: 35px;
+  padding: 20px;
 }
 
 nav li a:hover {
@@ -155,13 +155,18 @@ nav li li li a:hover {
   }
 }
 
-@media only screen and (min-width: 960px) {
+@media only screen and (min-width: 1024px) {
   nav {
     display: block !important;
   }
 }
 
-@media only screen and (max-width: 959px) {
+@media only screen and (max-width: 1023px) {
+  .logo {
+    float: left;
+    padding: 46px 0 46px;
+    display: block;
+  }
   nav {
     display: none;
     width: 100%;
@@ -189,14 +194,9 @@ nav li li li a:hover {
   #menu-icon.active .third {
     display: none;
   }
-  .search {
-    float: none;
-  }
-  .search input {
-    width: 100%;
-  }
   nav {
     padding: 10px;
+    margin-top: 60px;
   }
   nav ul {
     float: none;
@@ -208,6 +208,18 @@ nav li li li a:hover {
     float: none;
     padding: 8px;
     display: block;
+  }
+  nav li li li a {
+    float: none;
+    color: #333;
+    display: none;
+    padding: 8px 10px;
+    border-radius: 3px;
+    font-size: 13px;
+  }
+  nav li li li a:hover {
+    background: #bdc3c7;
+    background: #FAFBFB;
   }
   #header nav ul ul {
     display: block;
